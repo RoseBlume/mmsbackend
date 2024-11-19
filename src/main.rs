@@ -12,6 +12,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     
     // Create a proxy for the ModemManager1.Sms interface
     let proxy = connection.with_proxy(
+        "ModemManager",
         /*"org.freedesktop.ModemManager1",*/
         "/org/freedesktop/ModemManager1/Sms",
         Duration::from_millis(5000),
